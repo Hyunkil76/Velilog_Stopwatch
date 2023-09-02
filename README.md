@@ -53,19 +53,19 @@ We programed Switch Interface, Counter, MUX, LAP ...
 ---
 ## **Simulation**  
 
-![10_counter](pic/10_counter_sim.png)
+![10_counter](pic/10_counter_sim.png)  
 **10 Counter** : Increase 0000 to 1001 and return to 0000
 
-![6_counter](pic/6_counter_sim.png)
+![6_counter](pic/6_counter_sim.png)  
 **6 Counter** : Increase 0000 to 0101 and return to 0000
 
-![7_seg](pic/7_seg_sim.png)
+![7_seg](pic/7_seg_sim.png)  
 **7 Seg** : Convert 4 bit number to 7 bit segment vector
 
-![Lap](pic/Lap_sim.png)
+![Lap](pic/Lap_sim.png)  
 **LAP** : Save values when **SEL** goes HIGH
 
-![MUX](pic/MUX_sim.png)
+![MUX](pic/MUX_sim.png)  
 **MUX** : Output R values when **SEL** = LOW, output L values when **SEL** = HIGH
 
 ---
