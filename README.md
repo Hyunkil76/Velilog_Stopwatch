@@ -66,3 +66,5 @@ We programed Switch Interface, Counter, MUX, LAP ...
 **MUX** : Output R values when **SEL** = LOW, output L values when **SEL** = HIGH
 
 ## **Test**
+https://github.com/Hyunkil76/Velilog_Stopwatch/assets/83130841/494e69a9-6f0d-4a80-ba12-27a1c6583c77
+
