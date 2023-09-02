@@ -1,12 +1,10 @@
 # **Velilog Stopwatch**
 This is a term project for the **'Introductory Laboratory for Electrical and Electronic Engineering'** course at the Seoul National University of Science and Technology(**SEOULTECH**).
 
----
 ## **Work Condition**
 - Computer Architecture : Digcom 3.2
 - Software : QUARTUS II, ModelSim
 
----
 ## **System Block**
 ![system_block](pic/system_block.jpg)
 We programed Switch Interface, Counter, MUX, LAP ...
@@ -50,7 +48,6 @@ We programed Switch Interface, Counter, MUX, LAP ...
 - Activate when **mode** = 1
 - Incerease value by 10 min, 1 min, 10 sec, 1 sec, when each switch is pushed
 
----
 ## **Simulation**  
 
 ![10_counter](pic/10_counter_sim.png)  
@@ -68,5 +65,4 @@ We programed Switch Interface, Counter, MUX, LAP ...
 ![MUX](pic/MUX_sim.png)  
 **MUX** : Output R values when **SEL** = LOW, output L values when **SEL** = HIGH
 
----
 ## **Test**
