@@ -6,7 +6,7 @@ This is a term project for the **'Introductory Laboratory for Electrical and Ele
 - Software : QUARTUS II, ModelSim
 
 ## **System Block**
-![system_block](pic/system_block.jpg)
+![system_block](pic/system_block.jpg)  
 We programed Switch Interface, Counter, MUX, LAP ...
 
 **CLK** : Generate 100 pulse per a second.  
