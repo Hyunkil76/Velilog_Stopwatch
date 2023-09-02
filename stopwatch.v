@@ -1,0 +1,264 @@
+module stopwatch(
+  input MCLK,
+  input [3:0] SW,
+  input [7:0] DSW,
+  input RS_S,
+  input RST_S,
+  output [6:0] MM1,
+  output [6:0] MM2,
+  output [6:0] MM3,
+  output [6:0] MM4,
+  output [6:0] MM5,
+  output [6:0] MM6,
+  output [7:0] LED_OUT,
+  output LED_MODE
+);
+
+wire RUN;
+wire RST;
+wire SEL;
+wire MODE;
+wire CLKOUT;
+
+wire [3:0] Q1;
+wire [3:0] Q2;
+wire [3:0] Q3;
+wire [3:0] Q4;
+wire [3:0] Q5;
+wire [3:0] Q6;
+
+wire [6:0] S1;
+wire [6:0] S2;
+wire [6:0] S3;
+wire [6:0] S4;
+wire [6:0] S5;
+wire [6:0] S6;
+
+wire [6:0] L1;
+wire [6:0] L2;
+wire [6:0] L3;
+wire [6:0] L4;
+wire [6:0] L5;
+wire [6:0] L6;
+
+wire [3:0] M_L;
+wire [3:0] M_R;
+wire [3:0] S_L;
+wire [3:0] S_R;
+wire [3:0] MS_L;
+wire [3:0] MS_R;
+
+wire [6:0] DS1;
+wire [6:0] DS2;
+wire [6:0] DS3;
+wire [6:0] DS4;
+wire [6:0] DS5;
+wire [6:0] DS6;
+
+wire [6:0] M1;
+wire [6:0] M2;
+wire [6:0] M3;
+wire [6:0] M4;
+wire [6:0] M5;
+wire [6:0] M6;
+
+sw_inf sw_inf_t(
+  .mclk(MCLK),
+  .sw(SW),
+  .run(RUN),
+  .rst(RST),
+  .sel(SEL),
+  .mode(MODE)
+);
+
+clkdiv testclkdiv(
+  .mclk(MCLK),
+  .clkout(CLKOUT)
+  );
+
+count10 cnt10_1(
+  .run(RUN),
+  .rst(RST),
+  .clk(~CLKOUT),
+  .q(Q1)
+);
+
+count10 cnt10_2(
+  .run(RUN),
+  .rst(RST),
+  .clk(Q1[3]),
+  .q(Q2)
+);
+
+count10 cnt10_3(
+  .run(RUN),
+  .rst(RST),
+  .clk(Q2[3]),
+  .q(Q3)
+);
+ 
+count6 cnt6_1(
+  .run(RUN),
+  .rst(RST),
+  .clk(Q3[3]),
+  .q(Q4)
+);
+
+count10 cnt10_4(
+  .run(RUN),
+  .rst(RST),
+  .clk(Q4[2]),
+  .q(Q5)
+);
+
+count10 cnt10_5(
+  .run(RUN),
+  .rst(RST),
+  .clk(Q5[3]),
+  .q(Q6)
+);
+
+seg7 seg_1(
+  .val(Q1),
+  .seg(S1)
+);
+
+seg7 seg_2(
+  .val(Q2),
+  .seg(S2)
+);
+
+seg7 seg_3(
+  .val(Q3),
+  .seg(S3)
+);
+
+seg7 seg_4(
+  .val(Q4),
+  .seg(S4)
+);
+
+seg7 seg_5(
+  .val(Q5),
+  .seg(S5)
+);
+
+seg7 seg_6(
+  .val(Q6),
+  .seg(S6)
+);
+
+lap s_lap(
+  .sel(SEL),
+  .r1(S1),
+  .r2(S2),
+  .r3(S3),
+  .r4(S4),
+  .r5(S5),
+  .r6(S6),
+  .l1(L1),
+  .l2(L2),
+  .l3(L3),
+  .l4(L4),
+  .l5(L5),
+  .l6(L6)
+);
+
+mux t_mux(
+  .sel(SEL),
+  .clk(MCLK),
+  .r1(S1),
+  .r2(S2),
+  .r3(S3),
+  .r4(S4),
+  .r5(S5),
+  .r6(S6),
+  .l1(L1),
+  .l2(L2),
+  .l3(L3),
+  .l4(L4),
+  .l5(L5),
+  .l6(L6),
+  .m1(M1),
+  .m2(M2),
+  .m3(M3),
+  .m4(M4),
+  .m5(M5),
+  .m6(M6)
+);
+
+led_d led_driver(
+  .val(Q2),
+  .mode(MODE),
+  .q(LED_OUT),
+  .q2(LED_MODE)
+);
+
+d_count dcnt(
+  .mclk(MCLK),
+  .clkout(CLKOUT),
+  .mode(MODE),
+  .rs_s(RS_S),
+  .rst_s(RST_S),
+  .sw(DSW),
+  .m_l(M_L),
+  .m_r(M_R),
+  .s_l(S_L),
+  .s_r(S_R),
+  .ms_l(MS_L),
+  .ms_r(MS_R)
+);
+
+seg7 dseg_1(
+  .val(M_L),
+  .seg(DS6)
+);
+
+seg7 dseg_2(
+  .val(M_R),
+  .seg(DS5)
+);
+
+seg7 dseg_3(
+  .val(S_L),
+  .seg(DS4)
+);
+
+seg7 dseg_4(
+  .val(S_R),
+  .seg(DS3)
+);
+
+seg7 dseg_5(
+  .val(MS_L),
+  .seg(DS2)
+);
+
+seg7 dseg_6(
+  .val(MS_R),
+  .seg(DS1)
+);
+
+mux d_mux(
+  .sel(MODE),
+  .clk(MCLK),
+  .r1(M1),
+  .r2(M2),
+  .r3(M3),
+  .r4(M4),
+  .r5(M5),
+  .r6(M6),
+  .l1(DS1),
+  .l2(DS2),
+  .l3(DS3),
+  .l4(DS4),
+  .l5(DS5),
+  .l6(DS6),
+  .m1(MM1),
+  .m2(MM2),
+  .m3(MM3),
+  .m4(MM4),
+  .m5(MM5),
+  .m6(MM6)
+);
+endmodule

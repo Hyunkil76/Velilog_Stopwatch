@@ -1,0 +1,134 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2011 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Web Edition
+# Date created = 09:42:18  November 28, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		stopwatch_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name DEVICE EP1C4F324C8
+set_global_assignment -name TOP_LEVEL_ENTITY stopwatch
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "11.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:42:18  NOVEMBER 28, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "11.0 SP1"
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VERILOG_FILE 6count.v
+set_global_assignment -name VERILOG_FILE clkdiv.v
+set_global_assignment -name VERILOG_FILE count10.v
+set_global_assignment -name VERILOG_FILE d_count.v
+set_global_assignment -name VERILOG_FILE stopwatch.v
+set_global_assignment -name VERILOG_FILE lap.v
+set_global_assignment -name VERILOG_FILE led_d.v
+set_global_assignment -name VERILOG_FILE mux.v
+set_global_assignment -name VERILOG_FILE seg7.v
+set_global_assignment -name VERILOG_FILE sw_inf.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_H16 -to DSW[7]
+set_location_assignment PIN_C17 -to DSW[6]
+set_location_assignment PIN_H17 -to DSW[5]
+set_location_assignment PIN_D16 -to DSW[4]
+set_location_assignment PIN_H18 -to DSW[3]
+set_location_assignment PIN_D17 -to DSW[2]
+set_location_assignment PIN_H15 -to DSW[1]
+set_location_assignment PIN_D18 -to DSW[0]
+set_location_assignment PIN_J3 -to MCLK
+set_location_assignment PIN_B15 -to MM1[6]
+set_location_assignment PIN_C15 -to MM1[5]
+set_location_assignment PIN_B16 -to MM1[4]
+set_location_assignment PIN_A15 -to MM1[3]
+set_location_assignment PIN_D14 -to MM1[2]
+set_location_assignment PIN_D13 -to MM1[1]
+set_location_assignment PIN_E13 -to MM1[0]
+set_location_assignment PIN_F11 -to MM2[6]
+set_location_assignment PIN_A13 -to MM2[5]
+set_location_assignment PIN_B13 -to MM2[4]
+set_location_assignment PIN_D12 -to MM2[3]
+set_location_assignment PIN_C12 -to MM2[2]
+set_location_assignment PIN_A12 -to MM2[1]
+set_location_assignment PIN_B12 -to MM2[0]
+set_location_assignment PIN_B11 -to MM3[6]
+set_location_assignment PIN_C11 -to MM3[5]
+set_location_assignment PIN_D11 -to MM3[4]
+set_location_assignment PIN_A11 -to MM3[3]
+set_location_assignment PIN_F10 -to MM3[2]
+set_location_assignment PIN_C10 -to MM3[1]
+set_location_assignment PIN_D10 -to MM3[0]
+set_location_assignment PIN_D9 -to MM4[6]
+set_location_assignment PIN_F9 -to MM4[5]
+set_location_assignment PIN_A10 -to MM4[4]
+set_location_assignment PIN_C9 -to MM4[3]
+set_location_assignment PIN_B9 -to MM4[2]
+set_location_assignment PIN_E8 -to MM4[1]
+set_location_assignment PIN_A9 -to MM4[0]
+set_location_assignment PIN_A8 -to MM5[6]
+set_location_assignment PIN_B8 -to MM5[5]
+set_location_assignment PIN_C8 -to MM5[4]
+set_location_assignment PIN_E7 -to MM5[3]
+set_location_assignment PIN_D7 -to MM5[2]
+set_location_assignment PIN_B7 -to MM5[1]
+set_location_assignment PIN_C7 -to MM5[0]
+set_location_assignment PIN_B6 -to MM6[6]
+set_location_assignment PIN_C6 -to MM6[5]
+set_location_assignment PIN_D6 -to MM6[4]
+set_location_assignment PIN_D5 -to MM6[3]
+set_location_assignment PIN_C5 -to MM6[2]
+set_location_assignment PIN_A4 -to MM6[1]
+set_location_assignment PIN_B4 -to MM6[0]
+set_location_assignment PIN_G15 -to RS_S
+set_location_assignment PIN_E16 -to SW[3]
+set_location_assignment PIN_F16 -to SW[2]
+set_location_assignment PIN_F17 -to SW[1]
+set_location_assignment PIN_F18 -to SW[0]
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CYCLONE_CONFIGURATION_DEVICE EPCS1
+set_location_assignment PIN_U15 -to LED_MODE
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_location_assignment PIN_R10 -to LED_OUT[7]
+set_location_assignment PIN_U10 -to LED_OUT[6]
+set_location_assignment PIN_V10 -to LED_OUT[5]
+set_location_assignment PIN_R11 -to LED_OUT[4]
+set_location_assignment PIN_V12 -to LED_OUT[3]
+set_location_assignment PIN_T13 -to LED_OUT[2]
+set_location_assignment PIN_U13 -to LED_OUT[1]
+set_location_assignment PIN_V13 -to LED_OUT[0]
+set_location_assignment PIN_G18 -to RST_S
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

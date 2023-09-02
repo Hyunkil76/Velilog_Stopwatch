@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'MCLK'
+Slack : -7.289
+TNS   : -267.818
+
+Type  : Setup 'sw_inf:sw_inf_t|sel'
+Slack : -3.001
+TNS   : -95.696
+
+Type  : Setup 'count10:cnt10_2|q[3]'
+Slack : -1.028
+TNS   : -4.112
+
+Type  : Setup 'count10:cnt10_4|q[3]'
+Slack : -0.939
+TNS   : -3.756
+
+Type  : Setup 'count6:cnt6_1|q[2]'
+Slack : -0.927
+TNS   : -3.708
+
+Type  : Setup 'SW[3]'
+Slack : -0.825
+TNS   : -0.825
+
+Type  : Setup 'clkdiv:testclkdiv|clkout'
+Slack : -0.602
+TNS   : -2.149
+
+Type  : Setup 'count10:cnt10_1|q[3]'
+Slack : -0.588
+TNS   : -1.837
+
+Type  : Setup 'SW[0]'
+Slack : -0.581
+TNS   : -0.581
+
+Type  : Setup 'count10:cnt10_3|q[3]'
+Slack : -0.516
+TNS   : -1.548
+
+Type  : Hold 'count6:cnt6_1|q[2]'
+Slack : -4.609
+TNS   : -17.623
+
+Type  : Hold 'count10:cnt10_1|q[3]'
+Slack : -4.530
+TNS   : -18.060
+
+Type  : Hold 'clkdiv:testclkdiv|clkout'
+Slack : -4.222
+TNS   : -16.885
+
+Type  : Hold 'count10:cnt10_2|q[3]'
+Slack : -4.008
+TNS   : -13.294
+
+Type  : Hold 'sw_inf:sw_inf_t|sel'
+Slack : -3.238
+TNS   : -82.281
+
+Type  : Hold 'count10:cnt10_3|q[3]'
+Slack : -2.974
+TNS   : -8.897
+
+Type  : Hold 'MCLK'
+Slack : -2.082
+TNS   : -5.514
+
+Type  : Hold 'count10:cnt10_4|q[3]'
+Slack : 1.097
+TNS   : 0.000
+
+Type  : Hold 'SW[0]'
+Slack : 1.334
+TNS   : 0.000
+
+Type  : Hold 'SW[3]'
+Slack : 1.578
+TNS   : 0.000
+
+Type  : Recovery 'count10:cnt10_2|q[3]'
+Slack : -0.086
+TNS   : -0.344
+
+Type  : Recovery 'count10:cnt10_4|q[3]'
+Slack : 0.018
+TNS   : 0.000
+
+Type  : Recovery 'clkdiv:testclkdiv|clkout'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Recovery 'count6:cnt6_1|q[2]'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Recovery 'count10:cnt10_3|q[3]'
+Slack : 0.656
+TNS   : 0.000
+
+Type  : Recovery 'count10:cnt10_1|q[3]'
+Slack : 0.821
+TNS   : 0.000
+
+Type  : Removal 'count10:cnt10_1|q[3]'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Removal 'count10:cnt10_3|q[3]'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Removal 'count6:cnt6_1|q[2]'
+Slack : 0.578
+TNS   : 0.000
+
+Type  : Removal 'clkdiv:testclkdiv|clkout'
+Slack : 0.843
+TNS   : 0.000
+
+Type  : Removal 'count10:cnt10_4|q[3]'
+Slack : 0.930
+TNS   : 0.000
+
+Type  : Removal 'count10:cnt10_2|q[3]'
+Slack : 1.034
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'MCLK'
+Slack : -1.583
+TNS   : -191.375
+
+Type  : Minimum Pulse Width 'SW[0]'
+Slack : -1.583
+TNS   : -4.219
+
+Type  : Minimum Pulse Width 'SW[3]'
+Slack : -1.583
+TNS   : -4.219
+
+Type  : Minimum Pulse Width 'sw_inf:sw_inf_t|sel'
+Slack : -1.318
+TNS   : -110.712
+
+Type  : Minimum Pulse Width 'clkdiv:testclkdiv|clkout'
+Slack : -1.318
+TNS   : -10.544
+
+Type  : Minimum Pulse Width 'count10:cnt10_1|q[3]'
+Slack : -1.318
+TNS   : -10.544
+
+Type  : Minimum Pulse Width 'count10:cnt10_2|q[3]'
+Slack : -1.318
+TNS   : -10.544
+
+Type  : Minimum Pulse Width 'count10:cnt10_4|q[3]'
+Slack : -1.318
+TNS   : -10.544
+
+Type  : Minimum Pulse Width 'count6:cnt6_1|q[2]'
+Slack : -1.318
+TNS   : -10.544
+
+Type  : Minimum Pulse Width 'count10:cnt10_3|q[3]'
+Slack : -1.318
+TNS   : -7.908
+
+------------------------------------------------------------

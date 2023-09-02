@@ -1,0 +1,17 @@
+module led_d(
+  input [3:0] val,
+  output reg [7:0] q = 8'b00000000
+);
+
+always @(val)
+begin
+  if(val[3:0] >= 4'b0101)
+    begin
+      q <= 8'b11111111;
+    end
+  else
+    begin
+      q <= 8'b00000000;
+    end
+end
+endmodule
